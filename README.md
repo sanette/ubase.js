@@ -70,8 +70,9 @@ Bonjour
 
 ## Source
 
-This library is automatically generated from the `OCaml` [`ubase` version](https://github.com/sanette/ubase)  using
-[`js-of-ocaml`](https://ocsigen.org/js_of_ocaml/latest/manual/overview)
+This library is automatically generated from the
+[`OCaml` `ubase` version](https://github.com/sanette/ubase) using
+[`js-of-ocaml`](https://ocsigen.org/js_of_ocaml/latest/manual/overview).
 
 
 ## UTF8 coverage
