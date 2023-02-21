@@ -23,9 +23,9 @@ utf8, or non-latin characters:
 
 + `set_malformed ( s )` : the given string `s` will be used to replace
   any malformed utf8 char. Default is '?'.
-+ `set_strip ( s )` : the given string `s` will replace any utf8 char
-  that is not based on a latin char, like '→'. Default is the empty
-  string (hence the name "strip").
++ `set_strip ( s )` : the given string `s` will replace any non-ascii
+  utf8 char that is not based on a latin char, like '→'. Default is
+  the empty string (hence the name "strip").
 
 Other helper functions:
 
@@ -34,6 +34,26 @@ Other helper functions:
 + `cp1252_to_utf8 ( s )` : convert the cp1252-encoded (aka Windows
 encoding) string `s` to utf8.
 
+## HTML example
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <script src="./ubase.js"></script>
+
+    <h1>Ubase</h1>
+
+    <p>
+      <script>
+	document.write(from_utf8('Ŧħïŝ ịṣ Ĝóôđ!'));
+      </script>
+    </p>
+
+  </body>
+</html>
+```
 
 ## The `ubasex.js` executable
 
