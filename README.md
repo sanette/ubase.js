@@ -25,10 +25,14 @@ utf8, or non-latin characters:
 + `set_malformed ( s )` : the given string `s` will be used to replace
   any malformed utf8 char. Default is '?'.
 + `set_strip ( s )` : `s` can be either a string, or `undefined`. If
-  `s` is a string, it will replace any non-ascii utf8 char that is not
+  `s` is a string, it will replace any non-ASCII utf8 char that is not
   based on a latin char, like '→'. It is allowed for `s` to be the
   empty string (hence the name "strip"). If `s` is `undefined`, no
   replacement takes place.
+
+If both `malformed` and `strip` contain only ASCII characters, then
+the result of `from_utf8` is guaranteed to contain only ASCII
+characters.
 
 Other helper functions:
 
