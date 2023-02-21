@@ -11,12 +11,11 @@ you back the *base* letter of these characters.
 
 The main function is `from_utf8`:
 
-```
+```js
 > var ubase = require ("./ubase.js");
 undefined
 > ubase.from_utf8 ('Bøǹĵöůɍ');
 'Bonjour'
->
 ```
 
 You may control the behaviour of `from_utf8` in case of malformed
@@ -44,7 +43,6 @@ test it with `node`:
 ```
 $ node ubasex.js Bøǹĵöůɍ
 Bonjour
-
 ```
 
 ## Source
