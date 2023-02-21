@@ -1,6 +1,7 @@
 # ubase.js
 
-Javascript library to remove accents (and more) from utf8 strings
+Javascript library to remove accents, diacritics (and more) from utf8
+strings
 
 Many utf8 characters are "based" on latin letters; that's clear for
 accents, like "é" which is based on "e", but also for more rare
@@ -68,3 +69,8 @@ Bonjour
 ## Source
 
 This library is automatically generated from the `OCaml` [`ubase` version](https://github.com/sanette/ubase)
+
+## UTF8 coverage
+
+Should be quite complete. File an issue if some character is not
+properly basified.
