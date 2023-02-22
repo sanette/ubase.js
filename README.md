@@ -10,7 +10,8 @@ you back the *base* letter of these characters.
 
 ## The `ubase.js` library
 
-Usage is straighforward. The main function is `basify`:
+You just need the `ubase.js` file. Usage is straighforward. The main
+function is `basify`:
 
 ```js
 > const ubase = require ("./ubase.js");
