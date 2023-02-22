@@ -10,16 +10,16 @@ you back the *base* letter of these characters.
 
 ## The `ubase.js` library
 
-Usage is straighforward. The main function is `from_utf8`:
+Usage is straighforward. The main function is `basify`:
 
 ```js
-> var ubase = require ("./ubase.js");
+> const ubase = require ("./ubase.js");
 undefined
-> ubase.from_utf8 ('Bøǹĵöůɍ');
+> ubase.basify ('Bøǹĵöůɍ');
 'Bonjour'
 ```
 
-You may control the behaviour of `from_utf8` in case of malformed
+You may control the behaviour of `basify` in case of malformed
 utf8, or non-latin characters:
 
 + `set_malformed ( s )` : the given string `s` will be used to replace
@@ -28,10 +28,10 @@ utf8, or non-latin characters:
   `s` is a string, it will replace any non-ASCII utf8 char that is not
   based on a latin char, like '→'. It is allowed for `s` to be the
   empty string (hence the name "strip"). If `s` is `undefined`, no
-  replacement takes place.
+  replacement takes place (this is the default).
 
 If both `malformed` and `strip` contain only ASCII characters, then
-the result of `from_utf8` is guaranteed to contain only ASCII
+the result of `basify` is guaranteed to contain only ASCII
 characters.
 
 Other helper functions:
@@ -54,7 +54,7 @@ encoding) string `s` to utf8.
 
     <p>
       <script>
-	document.write(from_utf8('Ŧħïŝ ịṣ Ĝóôđ!'));
+	document.write(basify('Ŧħïŝ ịṣ Ĝóôđ!'));
       </script>
     </p>
 
