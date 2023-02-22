@@ -8,16 +8,31 @@ accents, like "é" which is based on "e", but also for more rare
 symbols like "🅴" or "Ǝ" ! The idea of this simple library is to give
 you back the *base* letter of these characters.
 
+## Install
+
+```
+npm install ubase.js
+```
+
+or simply copy the `ubase.js` file where you need it.
+
 ## The `ubase.js` library
 
 You just need the `ubase.js` file. Usage is straighforward. The main
 function is `basify`:
 
 ```js
-> const ubase = require ("./ubase.js");
+> const ubase = require ("ubase.js");
 undefined
 > ubase.basify ('Bøǹĵöůɍ');
 'Bonjour'
+```
+
+If you just copied the `ubase.js` file to your current directory,
+replace the first line above by:
+
+```js
+> const ubase = require ("./ubase.js");
 ```
 
 You may control the behaviour of `basify` in case of malformed
