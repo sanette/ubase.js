@@ -39,7 +39,8 @@ You may control the behaviour of `basify` in case of malformed
 utf8, or non-latin characters:
 
 + `set_malformed ( s )` : the given string `s` will be used to replace
-  any malformed utf8 char. Default is '?'.
+  any malformed utf8 char (which should almost never happen in
+  Javascript). Default is '?'.
 + `set_strip ( s )` : `s` can be either a string, or `undefined`. If
   `s` is a string, it will replace any non-ASCII utf8 char that is not
   based on a latin char, like '→'. It is allowed for `s` to be the

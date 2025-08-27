@@ -1,11 +1,21 @@
 const ubase = require('ubase.js');
 
-var t1 = '1 → Ŧħïŝ ịṣ Ĝóôđ!';
-var r1 = '1 → This is Good!';
-var c1 = ubase.basify(t1);
-console.log (t1 + "==>" + c1);
-if (c1 == r1) {
-    console.log ("TEST 1: OK");
-} else {
-    throw ("Error Test 1");
+function mytest (input, expected, name) {
+    var c = ubase.basify(input);
+    console.log (input + " ==> " + c);   
+    if (c == expected) {
+	console.log (name + ": OK");
+    } else {
+	throw (name + ": ERROR ");
+    }
 }
+
+mytest ('1 → Ŧħïŝ ịṣ Ĝóôđ!', '1 → This is Good!', "Test 1");
+
+ubase.set_strip ("?");
+mytest ('2 → Bøǹĵöůɍ', '2 ? Bonjour', "Test 2 (set_strip)");
+
+ubase.set_strip (undefined);
+mytest ('3 → Vũ Ngọc Phan', '3 → Vu Ngoc Phan', "Test 3 (NFD)");
+
+mytest ('4 → Vũ Ngọc Phan', '4 → Vu Ngoc Phan', "Test 4 (NFC)");
